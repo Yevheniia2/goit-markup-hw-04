@@ -123,7 +123,6 @@ nav{
 }
 
 .site-nav-list .site-nav-link{
-    display: block;
     padding-top: 32px;
     padding-bottom: 32px;
 }
@@ -131,11 +130,13 @@ nav{
 .contacts-list{
     list-style: none;
     display: flex;
-    margin-left: auto;
     align-items: center;
+    margin-left: auto;
 }
 
 .contacts-list-link{
+    display: flex;
+    align-items: center;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -143,7 +144,6 @@ nav{
     text-align: center;
     list-style: none;
     color: var(--primary-text-color);
-    align-items: center;
 }
 
 .contacts-list-link:hover,
@@ -152,7 +152,6 @@ nav{
 }
 
 .contacts-list .contacts-list-link{
-    display: block;
     padding-top: 32px;
     padding-bottom: 32px;
 }
@@ -234,26 +233,13 @@ nav{
 }
 
 .features-list-icon{
-    width: 270px;
     height: 120px;
     margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--button-backgroung-color);
-}
-
-.features-icon-antena{
-    margin: 25px 102.34px 25px 102.34px;
-}
-
-.features-icon-time{
-    margin: 25px 101.54px 25px 101.5px;
-}
-
-.features-icon-computer{
-    margin: 33.2px 100px 33.11px 100px;
-}
-
-.features-icon-astronaut{
-    margin: 25px 100px 25px 100px;
+    border-radius: 4px;
 }
 
 .features-list-item{
@@ -261,9 +247,11 @@ nav{
 }
 
 .features-list-title{
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.14;
     text-align: left;
+    text-transform: uppercase;
     color:var(--title-text-color);
     list-style: none;
     margin-bottom: 10px;
@@ -285,6 +273,10 @@ nav{
 }
 
 /* Our profile section styles */
+
+.our-profile-section{
+    padding-top: 0;
+}
 
 .our-profile-list-images{
     display: flex;
@@ -344,7 +336,7 @@ img{
 }
 
 .our-team-item-inscription{
-    padding: 30px 0 16px;
+    padding: 30px 0 30px;
 }
 
 .our-team-item-third-title{
@@ -365,49 +357,28 @@ img{
 .social-media-list{
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.social-media-item{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
 }
 
 .social-media-item:not(:last-child){
     margin-right: 10px;
 }
 
-.social-media-item:hover,
-.social-media-item:focus{
-    background-color: var(--accent-color);
-}
-
 .social-media-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 44px;
     height: 44px;
-    padding: 0;
-    margin: 0;
-}
-
-.social-media-icon-instagram,
-.social-media-icon-twitter,
-.social-media-icon-facebook,
-.social-media-icon-linkedin{
+    color: var(--main-icon-color);
+    background-color: var(--main-background-color);
+    border-radius: 50%;
     fill: var(--main-icon-color);
-    margin: 12px;
 }
 
-.social-media-icon-instagram:hover,
-.social-media-icon-twitter:hover,
-.social-media-icon-facebook:hover,
-.social-media-icon-linkedin:hover,
-.social-media-icon-instagram:focus,
-.social-media-icon-twitter:focus,
-.social-media-icon-facebook:focus,
-.social-media-icon-linkedin:focus{
+.social-media-link:hover,
+.social-media-link:focus{
+    color: var(--main-background-color);
+    background-color: var(--accent-color);
     fill: var(--main-background-color);
 }
 
@@ -431,26 +402,18 @@ img{
     border: 1px solid #AFB1B8;
     box-sizing: border-box;
     border-radius: 4px;
-}
-
-.regular-customers-item:not(:last-child){
-    margin-right: 30px;
+    fill: var(--main-icon-color);
+    cursor: pointer;
 }
 
 .regular-customers-item:hover,
 .regular-customers-item:focus{
     border-color: var(--accent-color);
-    cursor: pointer;
-}
-
-.regular-customers-icon{
-    fill: var(--main-icon-color);
-    margin: 16px 32px;
-}
-
-.regular-customers-icon:hover,
-.regular-customers-icon:focus{
     fill: var(--accent-color);
+}
+
+.regular-customers-item:not(:last-child){
+    margin-right: 30px;
 }
 
 /* Footer styles */
@@ -512,33 +475,29 @@ address{
 
 .footer-social-media-list{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     margin-top: 20px;
     margin-left: 70px;
-}
-
-.footer-social-media-item{
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .footer-social-media-item:not(:last-child){
     margin-right: 10px;
 }
 
-.footer-social-media-item:hover,
-.footer-social-media-item:focus{
-    background-color: var(--accent-color);
+.footer-social-media-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: var(--primary-white-color);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer-social-media-icon-instagram,
-.footer-social-media-icon-twitter,
-.footer-social-media-icon-facebook,
-.footer-social-media-icon-linkedin{
-    fill: var(--primary-white-color);
-    margin: 12px;
+.footer-social-media-link:hover,
+.footer-social-media-link:focus{
+    background-color: var(--accent-color);
 }
 
 /* Portfolio buttons styles */
@@ -568,6 +527,7 @@ address{
 }
 
 .portfolio-menu-button{
+    padding: 6px 22px;
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -601,11 +561,6 @@ address{
     margin-bottom: 30px;
 }
 
-.portfolio-list-item:hover,
-.portfolio-list-item:focus{
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
 .portfolio-list-item:nth-child(3n){
     margin-right: 0;
 }
@@ -617,14 +572,24 @@ address{
 .potfolio-list-link{
     font-style: normal;
     text-decoration: none;
+    list-style: none;
     width: 370px;
     height: 294px;
+    cursor: pointer;
+}
+
+.potfolio-list-link:hover,
+.potfolio-list-link:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-list-inscription{
     padding: 20px 24px;
     border-bottom: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
 }
+
 .portfolio-list-title{
     font-weight: 700;
     font-size: 18px;
