@@ -164,8 +164,6 @@ nav{
 .header-icon{
     fill: currentColor;
     margin-right: 10px;
-    object-fit: none;
-    object-position: center;
 }
 
 /* Hero styles */
@@ -353,6 +351,7 @@ img{
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
+    margin-bottom: 16px;
 }
 
 .social-media-list{
@@ -370,7 +369,6 @@ img{
     justify-content: center;
     width: 44px;
     height: 44px;
-    margin-top: 16px;
     color: var(--main-icon-color);
     background-color: var(--main-background-color);
     border-radius: 50%;
@@ -437,7 +435,6 @@ img{
 
 .footer-content{
     display: flex;
-    justify-content: flex-start;
     align-items: baseline;
 }
 
@@ -465,7 +462,7 @@ img{
     color:var(--primary-white-color);
 }
 
-.footer-item:not(:last:child){
+.footer-item:not(:last-child){
     margin-bottom: 9px;
 }
 
@@ -478,10 +475,10 @@ address{
     text-decoration: none;
     color: var(--main-background-color);
 }
+
 .footer-contacts-link{
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
-    margin-top: 9px;
 }
 
 .footer-contacts-link:hover,
